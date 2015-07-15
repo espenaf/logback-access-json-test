@@ -1,0 +1,15 @@
+<configuration scan="1">
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="ch.qos.logback.contrib.json.access.JsonLayout">
+                <jsonFormatter class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter">
+                    <prettyPrint>true</prettyPrint>
+                </jsonFormatter>
+                <includeRequestURL>true</includeRequestURL>
+            </layout>
+        </encoder>
+    </appender>
+
+    <appender-ref ref="STDOUT"/>
+</configuration>
